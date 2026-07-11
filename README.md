@@ -4,14 +4,14 @@ Este projeto apresenta uma suíte de testes automatizados utilizando o Sauce Dem
 
 O projeto utiliza o Robot Framework junto com a Browser Library, implementando o padrão de arquitetura Page Objects com escrita de cenários em BDD (Gherkin).
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 *   **Python 3.12**
 *   **Robot Framework 7.0**
 *   **Robot Framework Browser Library**
 
 ---
 
-### ✅ O que já foi desenvolvido:
+### O que já foi desenvolvido:
 * **Arquitetura Base:**
 * **Suíte de Login (Autenticação):**
     *   Caminho feliz com usuário válido.
@@ -22,7 +22,9 @@ O projeto utiliza o Robot Framework junto com a Browser Library, implementando o
     *   Validação dinâmica do contador de itens (badge) do carrinho.
     *   Validação de presença do item na página de listagem do carrinho.
 
-### 🚀 Próximos Passos (Backlog de Estudos):
+---
+
+### Backlog:
 * **Fluxo de Remoção do Carrinho:** Validar a exclusão de itens e conferir se o contador decrementa corretamente.
 * **Fluxo de Checkout Completo:** Automatizar o fluxo de preenchimento de dados do cliente, página de sumário de compra e validação da tela de sucesso.
 * **Testes Baseados em Dados (Data-Driven Testing):** Criar cenários que testam múltiplos usuários inválidos usando uma única Keyword estruturada com massa de dados.
