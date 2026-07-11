@@ -12,7 +12,7 @@ O projeto utiliza o Robot Framework junto com a Browser Library, implementando o
 ---
 
 ### O que já foi desenvolvido:
-* **Arquitetura Base:**
+* **Arquitetura Base.**
 * **Suíte de Login (Autenticação):**
     *   Caminho feliz com usuário válido.
     *   Tratamento de erro com senha incorreta.
