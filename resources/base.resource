@@ -6,6 +6,8 @@ Library          Browser
 Resource         pages/login_page.resource
 Resource         pages/inventory_page.resource
 Resource         keywords/login_keywords.resource
+Resource         pages/cart_page.resource
+Resource         keywords/cart_keywords.resource
 
 *** Variables ***
 ${BASE_URL}      https://www.saucedemo.com
