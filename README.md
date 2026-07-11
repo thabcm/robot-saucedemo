@@ -13,7 +13,7 @@ O projeto utiliza o Robot Framework junto com a Browser Library, implementando o
 
 ### O que já foi desenvolvido:
 * **Arquitetura Base.**
-* **Suíte de Login (Autenticação):**
+* **Suíte de Login:**
     *   Caminho feliz com usuário válido.
     *   Tratamento de erro com senha incorreta.
     *   Tratamento de erro com usuário bloqueado.
@@ -31,4 +31,4 @@ O projeto utiliza o Robot Framework junto com a Browser Library, implementando o
 *  **Configuração Headless Dinâmica:** Alterar a Start Session para aceitar um argumento que permita rodar os testes sem abrir a interface gráfica.
 *  **Integração Contínua:** Criar uma pipeline no GitHub Actions para executar os testes automaticamente.
 * **Testes de API com RequestsLibrary:** Criar uma suíte de testes de integração consumindo uma API REST para validar verbos HTTP, status codes e payloads JSON.
-* **Geração de Relatórios Visuais Avançados:** Integrar a biblioteca robotframework-metrics para transformar o log padrão em um dashboard HTML moderno.
+* **Geração de Relatórios Visuais Avançados:** Integrar a biblioteca robotframework-metrics para transformar o log padrão em um dashboard moderno.
