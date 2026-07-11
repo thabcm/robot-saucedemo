@@ -20,3 +20,8 @@ Login Com Credenciais
     Preencher Usuário    ${username}
     Preencher Senha      ${password}
     Submeter Login
+
+Validar Mensagem de Erro
+    [Arguments]    ${expected_error}
+    # Espera o elemento de erro ficar visível e valida o texto dele de uma vez só
+    Get Text    ${TXT_ERROR_CONTAINER}    ==    ${expected_error}
