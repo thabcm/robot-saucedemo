@@ -1,0 +1,12 @@
+logs/
+browser/
+node_modules/
+package-lock.json
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.vscode/
+Thumbs.db
+.DS_Store
