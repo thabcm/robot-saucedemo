@@ -17,3 +17,5 @@ ${BTN_FINISH}               css=button[data-test="finish"]
 # Tela Final de Sucesso (Complete)
 ${TXT_COMPLETE_HEADER}      css=h2[data-test="complete-header"]
 ${TEXT_SUCCESS_MESSAGE}     Thank you for your order!
+
+${TXT_CHECKOUT_ERROR}       css=h3[data-test="error"]

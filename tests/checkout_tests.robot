@@ -14,6 +14,17 @@ Deve realizar o checkout de um produto com sucesso
     E finaliza o pedido
     Então deve ver a mensagem de confirmação de compra
 
+Deve validar campos obrigatórios no formulário de checkout
+    [Documentation]    Valida as mensagens de erro ao tentar avançar com dados incompletos usando DDT.
+    [Tags]             regression    checkout    ddt
+    [Template]         Validar Erro Ao Submeter FormIncompleto
+
+    # FIRST_NAME    LAST_NAME    POSTAL_CODE    MENSAGEM DE ERRO ESPERADA
+    ${EMPTY}        Melo         50000-000      Error: First Name is required
+    Thalita         ${EMPTY}     50000-000      Error: Last Name is required
+    Thalita         Melo         ${EMPTY}       Error: Postal Code is required
+
+
 *** Keywords ***
 Dado que o usuário tem um produto no carrinho
     Login Com Credenciais    standard_user    secret_sauce
@@ -32,3 +43,13 @@ E finaliza o pedido
 
 Então deve ver a mensagem de confirmação de compra
     Validar Compra Com Sucesso
+
+Validar Erro Ao Submeter FormIncompleto
+    [Arguments]    ${first_name}    ${last_name}    ${postal_code}    ${mensagem_erro_esperada}
+    # Cria um contexto zerado (limpa cookies e localStorage do navegador)
+    New Context    viewport={'width': 1280, 'height': 720}
+    New Page       ${BASE_URL}
+    Dado que o usuário tem um produto no carrinho
+    E avança para a tela de checkout
+    Tentar Submeter Checkout Sem Dados    ${first_name}    ${last_name}    ${postal_code}
+    Validar Mensagem De Erro Do Checkout   ${mensagem_erro_esperada}

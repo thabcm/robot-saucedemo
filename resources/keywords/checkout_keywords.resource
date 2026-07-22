@@ -19,3 +19,14 @@ Finalizar Compra
 
 Validar Compra Com Sucesso
     Get Text    ${TXT_COMPLETE_HEADER}    ==    ${TEXT_SUCCESS_MESSAGE}
+
+Tentar Submeter Checkout Sem Dados
+    [Arguments]    ${first_name}    ${last_name}    ${postal_code}
+    Fill Text      ${INPUT_FIRST_NAME}     ${first_name}
+    Fill Text      ${INPUT_LAST_NAME}      ${last_name}
+    Fill Text      ${INPUT_POSTAL_CODE}    ${postal_code}
+    Click          ${BTN_CONTINUE}
+
+Validar Mensagem De Erro Do Checkout
+    [Arguments]    ${expected_error}
+    Get Text       ${TXT_CHECKOUT_ERROR}    ==    ${expected_error}
