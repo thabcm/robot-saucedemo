@@ -8,6 +8,8 @@ Resource         pages/inventory_page.resource
 Resource         keywords/login_keywords.resource
 Resource         pages/cart_page.resource
 Resource         keywords/cart_keywords.resource
+Resource         pages/checkout_page.resource
+Resource         keywords/checkout_keywords.resource
 
 *** Variables ***
 ${BASE_URL}      https://www.saucedemo.com
