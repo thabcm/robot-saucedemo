@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation        Suíte de testes do carrinho de compras do SauceDemo.
 Resource             ../resources/base.resource
-Resource             ../resources/keywords/cart_keywords.resource
 
 Test Setup           Start Session
 Test Teardown        End Session
@@ -13,6 +12,13 @@ Deve adicionar um produto ao carrinho com sucesso
     Quando ele adiciona o produto "Sauce Labs Backpack" ao carrinho
     Então o ícone do carrinho deve exibir "1" item
     E ao abrir o carrinho o produto deve estar listado
+
+Deve remover um produto do carrinho com sucesso
+    [Tags]    regression    cart
+    Dado que o usuário tem o produto "Sauce Labs Backpack" no carrinho
+    E está na página do carrinho
+    Quando ele remove o produto "Sauce Labs Backpack"
+    Então o carrinho deve ficar vazio
 
 *** Keywords ***
 Dado que o usuário está logado no sistema
@@ -28,3 +34,16 @@ Então o ícone do carrinho deve exibir "${quantidade}" item
 E ao abrir o carrinho o produto deve estar listado
     Abrir O Carrinho
     Validar Produto No Carrinho    Sauce Labs Backpack
+
+Dado que o usuário tem o produto "${nome_produto}" no carrinho
+    Dado que o usuário está logado no sistema
+    Adicionar Mochila Ao Carrinho
+
+E está na página do carrinho
+    Abrir O Carrinho
+
+Quando ele remove o produto "${nome_produto}"
+    Remover Mochila Do Carrinho
+
+Então o carrinho deve ficar vazio
+    Validar Carrinho Vazio

@@ -11,3 +11,9 @@ ${BTN_GO_TO_CART}         css=a[data-test="shopping-cart-link"]
 
 # Elementos de validação dentro da página do carrinho
 ${TXT_CART_ITEM_NAME}     css=div[data-test="inventory-item-name"]
+
+# Botão para remover a mochila do carrinho
+${BTN_REMOVE_BACKPACK}    css=button[data-test="remove-sauce-labs-backpack"]
+
+# Elemento do badge do carrinho quando zerado/invisível
+${BADGE_CART_COUNT}       css=span[data-test="shopping-cart-badge"]

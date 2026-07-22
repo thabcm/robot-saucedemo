@@ -17,3 +17,9 @@ Abrir O Carrinho
 Validar Produto No Carrinho
     [Arguments]    ${nome_produto}
     Get Text       ${TXT_CART_ITEM_NAME}    ==    ${nome_produto}
+
+Remover Mochila Do Carrinho
+    Click    ${BTN_REMOVE_BACKPACK}
+
+Validar Carrinho Vazio
+    Wait For Elements State    ${BADGE_CART_COUNT}    detached    timeout=5s

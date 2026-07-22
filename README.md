@@ -21,11 +21,11 @@ O projeto utiliza o Robot Framework junto com a Browser Library, implementando o
     *   Fluxo E2E de adicionar produto ao carrinho.
     *   Validação dinâmica do contador de itens (badge) do carrinho.
     *   Validação de presença do item na página de listagem do carrinho.
+* **Fluxo de Remoção do Carrinho:** Validar a exclusão de itens e conferir se o contador decrementa corretamente.
 
 ---
 
 ### Backlog:
-* **Fluxo de Remoção do Carrinho:** Validar a exclusão de itens e conferir se o contador decrementa corretamente.
 * **Fluxo de Checkout Completo:** Automatizar o fluxo de preenchimento de dados do cliente, página de sumário de compra e validação da tela de sucesso.
 * **Testes Baseados em Dados (Data-Driven Testing):** Criar cenários que testam múltiplos usuários inválidos usando uma única Keyword estruturada com massa de dados.
 *  **Configuração Headless Dinâmica:** Alterar a Start Session para aceitar um argumento que permita rodar os testes sem abrir a interface gráfica.
