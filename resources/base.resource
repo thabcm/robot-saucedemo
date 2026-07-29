@@ -16,10 +16,10 @@ ${BASE_URL}      https://www.saucedemo.com
 
 *** Keywords ***
 Start Session
-    New Browser    browser=chromium    headless=False
+    [Arguments]    ${HEADLESS}=${FALSE}
+    New Browser    browser=chromium    headless=${HEADLESS}
     New Context    viewport={'width': 1280, 'height': 720}
     New Page       ${BASE_URL}
 
 End Session
     Take Screenshot
-    Close Browser
