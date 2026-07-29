@@ -17,7 +17,7 @@ ${BASE_URL}      https://www.saucedemo.com
 *** Keywords ***
 Start Session
     [Arguments]    ${HEADLESS}=${FALSE}
-    New Browser    browser=chromium    headless=${HEADLESS}
+    New Browser    browser=chromium    headless=${${HEADLESS}}
     New Context    viewport={'width': 1280, 'height': 720}
     New Page       ${BASE_URL}
 

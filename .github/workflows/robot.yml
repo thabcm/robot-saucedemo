@@ -30,7 +30,7 @@ jobs:
 
       - name: Executar Testes em Modo Headless
         run: |
-          robot -v HEADLESS:True -d ./logs tests/
+          robot -v HEADLESS:true -d ./logs tests/
 
       - name: Armazenar Relatórios e Evidências dos Testes
         if: always()
