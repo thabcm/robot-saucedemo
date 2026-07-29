@@ -23,4 +23,4 @@ Start Session
     New Page       ${BASE_URL}
 
 End Session
-    Take Screenshot
+    Run Keyword And Ignore Error    Take Screenshot
