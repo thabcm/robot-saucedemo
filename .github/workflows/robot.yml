@@ -24,9 +24,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Inicializar Driver do Browser
+      - name: Inicializar Driver do Browser com Permissões de Sistema
         run: |
-          rfbrowser init --with-deps
+          sudo $(which rfbrowser) init --with-deps
 
       - name: Executar Testes em Modo Headless
         run: |
