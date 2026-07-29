@@ -16,7 +16,7 @@ ${BASE_URL}      https://www.saucedemo.com
 
 *** Keywords ***
 Start Session
-    [Arguments]    ${HEADLESS}=${FALSE}
+    [Arguments]    ${HEADLESS}=${TRUE}
     ${HEADLESS_BOOL}=    Convert To Boolean    ${HEADLESS}
     New Browser    browser=chromium    headless=${HEADLESS_BOOL}
     New Context    viewport={'width': 1280, 'height': 720}
